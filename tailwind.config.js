@@ -99,6 +99,7 @@ module.exports = {
       'dark-violet': '#9400d3',
       'dark-orchid': '#9932cc',
       'dark-magenta': '#8b008b',
+      'dodgerblue': '#1E90FF',
       'purple': '#800080',
       'indigo': '#4b0082',
       'slate-blue': '#6a5acd',

@@ -10,6 +10,7 @@
       href="images/Munaff-logo.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="index.js"></script>
     <style>
@@ -23,7 +24,7 @@
         color: #1e90ff;
       }
       section {
-       scroll-margin-top: 6rem;
+        scroll-margin-top: 6rem;
       }
     </style>
   </head>
@@ -166,7 +167,11 @@
             style="border: 2px solid #1e90ff"
           >
             <img src="images/polishing.jpg" class="lg:w-72 w-36 h-auto" />
-            <h4 class="text-gray-700 font-medium lg:text-3xl text-xl lg:ml-6 ml-3">Polishing</h4>
+            <h4
+              class="text-gray-700 font-medium lg:text-3xl text-xl lg:ml-6 ml-3"
+            >
+              Polishing
+            </h4>
           </span>
 
           <span
@@ -174,7 +179,11 @@
             style="border: 2px solid #1e90ff"
           >
             <img src="images/polishing.jpg" class="lg:w-72 w-36 h-auto" />
-            <h4 class="text-gray-700 font-medium lg:text-3xl text-xl lg:ml-6 ml-3">Polishing</h4>
+            <h4
+              class="text-gray-700 font-medium lg:text-3xl text-xl lg:ml-6 ml-3"
+            >
+              Polishing
+            </h4>
           </span>
 
           <span
@@ -182,7 +191,11 @@
             style="border: 2px solid #1e90ff"
           >
             <img src="images/polishing.jpg" class="lg:w-72 w-36 h-auto" />
-            <h4 class="text-gray-700 font-medium lg:text-3xl text-xl lg:ml-6 ml-3">Polishing</h4>
+            <h4
+              class="text-gray-700 font-medium lg:text-3xl text-xl lg:ml-6 ml-3"
+            >
+              Polishing
+            </h4>
           </span>
 
           <span
@@ -190,7 +203,11 @@
             style="border: 2px solid #1e90ff"
           >
             <img src="images/polishing.jpg" class="lg:w-72 w-36 h-auto" />
-            <h4 class="text-gray-700 font-medium lg:text-3xl text-xl lg:ml-6 ml-3">Polishing</h4>
+            <h4
+              class="text-gray-700 font-medium lg:text-3xl text-xl lg:ml-6 ml-3"
+            >
+              Polishing
+            </h4>
           </span>
         </div>
       </div>
@@ -199,17 +216,120 @@
     <!-- Appointment Section -->
     <section
       id="appointment"
-      class="relative w-full min-h-screen flex items-center justify-center"
+      class="relative w-full h-max flex flex-col items-center justify-center bg-gray-100 py-16"
     >
       <h1 class="text-3xl mb-9 font-semibold text-center">APPOINTMENT</h1>
+
+      <div class="bg-white shadow-lg rounded-md p-6 w-full max-w-3xl">
+        <p class="text-gray-700 text-center mb-4">
+          Book an appointment with us today!
+        </p>
+        <form action="#" class="flex flex-col space-y-4">
+          <input
+            type="text"
+            placeholder="Full Name"
+            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            type="date"
+            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <textarea
+            placeholder="Your Message"
+            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></textarea>
+          <button
+            type="submit"
+            class="p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+          >
+            Book Appointment
+          </button>
+        </form>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section
       id="contact"
-      class="relative w-full min-h-screen flex items-center justify-center"
+      class="relative w-full min-h-screen flex flex-col items-center justify-center pt-24 bg-white"
     >
       <h1 class="text-3xl mb-9 font-semibold text-center">CONTACT US</h1>
+      <div class="w-full max-w-lg mx-auto p-6 bg-white rounded-md shadow-md">
+        <form class="space-y-6" method="post" target="mailto:your-email@example.com">
+          <div>
+            <label for="name" class="block text-gray-700">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="w-full p-2 border border-gray-300 rounded-md"
+              placeholder="Your Name"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="w-full p-2 border border-gray-300 rounded-md"
+              placeholder="Your Email"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-gray-700">Message</label>
+            <textarea
+              id="message"
+              class="w-full p-2 border border-gray-300 rounded-md"
+              rows="5"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+          <button
+            class="w-full p-2 text-white rounded-md"
+            style="background-color: #151b54"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
     </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-white shadow-md w-full h-24 flex items-center lg:justify-around justify-between px-6"
+      style="background-color: #151b54"
+    >
+      <div class="flex space-x-8 text-white">
+        <a href="#" aria-label="WhatsApp" class="hover:opacity-75">
+          <i class="fab fa-whatsapp w-8 h-8"></i>
+        </a>
+        <a href="#" aria-label="Facebook" class="hover:opacity-75">
+          <img src="images/facebook-icon.png" alt="Facebook" class="w-8 h-8" />
+        </a>
+        <a href="#" aria-label="LinkedIn" class="hover:opacity-75">
+          <img src="images/linkedin-icon.png" alt="LinkedIn" class="w-8 h-8" />
+        </a>
+        <a
+          href="mailto:your-email@example.com"
+          aria-label="Email"
+          class="hover:opacity-75"
+        >
+          <img src="images/email-icon.png" alt="Email" class="w-8 h-8" />
+        </a>
+      </div>
+      <div class="text-white">
+        Powered by
+        <a
+          href="https://bceesay10.github.io/personal-portfolio/index.html"
+          target="_blank"
+          class="hover:underline hover:font-bold"
+          >BC Tech</a
+        >
+      </div>
+    </footer>
   </body>
 </html>

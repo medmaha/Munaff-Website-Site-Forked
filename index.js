@@ -40,3 +40,65 @@ window.addEventListener('scroll', function() {
         });
     });
 });
+
+//Sliding images in the About section
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector('.carousel');
+  const items = document.querySelectorAll('.carousel-item');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  let currentIndex = 0;
+  const totalSlides = items.length;
+  const slideInterval = 5000; 
+
+  // Function to update the carousel's position
+  const updateCarousel = () => {
+    const offset = -currentIndex * 100; // Slide based on index
+    carousel.style.transform = `translateX(${offset}%)`;
+  };
+
+  // Show the next slide
+  const showNext = () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  };
+
+  // Show the previous slide
+  const showPrev = () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  };
+
+  // Auto-slide functionality
+  let autoSlide = setInterval(showNext, slideInterval);
+
+  // Pause auto-slide on hover and resume on mouse leave
+  const carouselContainer = document.querySelector('.carousel-container');
+  carouselContainer.addEventListener('mouseover', () => clearInterval(autoSlide));
+  carouselContainer.addEventListener('mouseleave', () => {
+    autoSlide = setInterval(showNext, slideInterval);
+  });
+
+  // Event listeners for navigation buttons
+  prevBtn.addEventListener("click", () => {
+    clearInterval(autoSlide); 
+    showPrev();
+    autoSlide = setInterval(showNext, slideInterval);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    clearInterval(autoSlide); // Reset auto-slide
+    showNext();
+    autoSlide = setInterval(showNext, slideInterval);
+  });
+
+  // Optional: Add swipe gestures for touch devices
+  let startX = 0;
+  carousel.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX));
+  carousel.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX > endX + 50) showNext(); 
+    else if (startX < endX - 50) showPrev(); 
+  });
+});

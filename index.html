@@ -29,6 +29,7 @@
       section {
         scroll-margin-top: 6rem;
       }
+     
     </style>
   </head>
   <body class="overflow-x-hidden">
@@ -123,73 +124,101 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="relative w-full h-max">
-      <div class="container mx-auto p-6">
-        <h1 class="text-3xl mb-9 font-semibold text-center">ABOUT US</h1>
-        <div
-          class="flex flex-col md:flex-row items-center md:justify-between gap-4 lg:gap-8"
+   <!-- About Section -->
+<section id="about" class="relative w-full h-max">
+  <div class="container mx-auto p-6">
+    <h1 class="text-3xl mb-9 font-semibold text-center">ABOUT US</h1>
+    <div
+      class="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-4 lg:gap-8"
+    >
+      <div class="md:w-1/2 mb-6 md:mb-0">
+        <p
+          class="text-gray-800 font-medium text-lg md:text-xl md:text-justify text-center"
         >
-          <div class="md:w-1/2 mb-6 md:mb-0">
-            <p
-              class="text-gray-800 font-medium text-lg md:text-xl md:text-justify text-center"
-            >
-              At Munaff Dental Clinic, we are dedicated to providing exceptional
-              dental care that prioritizes your health, comfort, and confidence.
-              With a team of skilled professionals, we offer a wide range of
-              services from routine check-ups and cleanings to advanced cosmetic
-              and restorative treatments. Our mission is to make every visit
-              comfortable and stress-free, ensuring that each patient leaves
-              with a smile they are proud to show.
-            </p>
-            <br />
-            <h4 class="text-blue-500 font-bold text-lg md:text-xl">
-              Our Philosophy
-            </h4>
-            <p
-              class="text-gray-800 font-medium text-lg md:text-xl md:text-justify text-center"
-            >
-              We believe that great dental care is built on trust, personalized
-              care, and the latest in dental technology. Whether you're here for
-              preventive care, teeth whitening, orthodontic solutions, or a
-              complete smile makeover, our experienced team tailor’s treatment
-              plans that meet your unique needs. We combine a compassionate
-              approach with cutting-edge techniques to ensure the highest
-              standards of care.
-            </p>
-            <br />
-            <h4 class="text-blue-500 font-bold text-lg md:text-xl">
-              Why Choose Us?
-            </h4>
-            <p
-              class="text-gray-800 font-medium text-lg md:text-xl md:text-justify text-center"
-            >
-              <b>Patient-Centered Care:</b> Your comfort and satisfaction are
-              our top priorities. We take the time to listen, answer your
-              questions, and make sure you are fully informed before any
-              procedure. <br />
-              <b>Advanced Technology:</b> Our clinic is equipped with
-              state-of-the-art technology, allowing us to deliver faster, more
-              accurate diagnoses and treatments. <br />
-              <b>Experienced Team:</b> Our team of dental professionals is
-              highly trained in various specialties, bringing years of expertise
-              and dedication to every patient interaction. <br />
-              <b>Relaxing Environment:</b> We have designed our clinic to be a
-              calm and welcoming space, helping to ease any anxieties and
-              ensuring a pleasant experience for all ages.
-            </p>
-          </div>
+          At Munaff Dental Clinic, we are dedicated to providing exceptional
+          dental care that prioritizes your health, comfort, and confidence.
+          With a team of skilled professionals, we offer a wide range of
+          services from routine check-ups and cleanings to advanced cosmetic
+          and restorative treatments. Our mission is to make every visit
+          comfortable and stress-free, ensuring that each patient leaves
+          with a smile they are proud to show.
+        </p>
+        <br />
+        <h4 class="text-blue-500 font-bold text-lg md:text-xl">
+          Our Philosophy
+        </h4>
+        <p
+          class="text-gray-800 font-medium text-lg md:text-xl md:text-justify text-center"
+        >
+          We believe that great dental care is built on trust, personalized
+          care, and the latest in dental technology. Whether you're here for
+          preventive care, teeth whitening, orthodontic solutions, or a
+          complete smile makeover, our experienced team tailor’s treatment
+          plans that meet your unique needs. We combine a compassionate
+          approach with cutting-edge techniques to ensure the highest
+          standards of care.
+        </p>
+        <br />
+        <h4 class="text-blue-500 font-bold text-lg md:text-xl">
+          Why Choose Us?
+        </h4>
+        <p
+          class="text-gray-800 font-medium text-lg md:text-xl md:text-justify text-center"
+        >
+          <b>Patient-Centered Care:</b> Your comfort and satisfaction are
+          our top priorities. We take the time to listen, answer your
+          questions, and make sure you are fully informed before any
+          procedure. <br />
+          <b>Advanced Technology:</b> Our clinic is equipped with
+          state-of-the-art technology, allowing us to deliver faster, more
+          accurate diagnoses and treatments. <br />
+          <b>Experienced Team:</b> Our team of dental professionals is
+          highly trained in various specialties, bringing years of expertise
+          and dedication to every patient interaction. <br />
+          <b>Relaxing Environment:</b> We have designed our clinic to be a
+          calm and welcoming space, helping to ease any anxieties and
+          ensuring a pleasant experience for all ages.
+        </p>
+      </div>
 
-          <div class="md:w-1/2">
+      <!-- Carousel Section -->
+      <div class="md:w-1/2 relative">
+        <div class="carousel-container relative overflow-hidden rounded-md shadow-md">
+          <div class="carousel flex transition-transform duration-500 ease-in-out">
             <img
               src="images/Home-image.JPG"
-              alt="About Us Image"
-              class="w-full rounded-md shadow-md"
+              alt="Slide 1"
+              class="carousel-item w-full"
+            />
+            <img
+              src="images/Home-image.JPG"
+              alt="Slide 2"
+              class="carousel-item w-full"
+            />
+            <img
+              src="images/Home-image.JPG"
+              alt="Slide 3"
+              class="carousel-item w-full"
             />
           </div>
+          <!-- Navigation Buttons -->
+          <button
+            class="prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md z-10"
+          >
+            &#8592;
+          </button>
+          <button
+            class="next absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md z-10"
+          >
+            &#8594;
+          </button>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Services Section -->
     <section
@@ -310,7 +339,6 @@
       <div
         class="container mx-auto grid gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1"
       >
-        
         <div class="flex flex-col items-center text-center">
           <img
             src="images/ceo.JPG"

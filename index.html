@@ -182,7 +182,7 @@
 
           <!-- Carousel Section -->
           <div class="md:w-1/2 relative">
-            <div class="carousel-container relative overflow-hidden rounded-md shadow-md lg:h-[810px]">
+            <div class="carousel-container relative overflow-hidden rounded-md shadow-md">
 
               <div
                 class="carousel flex h-auto transition-transform duration-500 ease-in-out"
@@ -233,11 +233,6 @@
                   class="carousel-item w-full h-auto object-contain"
                 />
                 <img
-                  src="images/about/img-10.jpg"
-                  alt="Slide 19"
-                  class="carousel-item w-full h-auto object-contain"
-                />
-                <img
                   src="images/about/img-11.jpg"
                   alt="Slide 11"
                   class="carousel-item w-full h-auto object-contain"
@@ -247,11 +242,11 @@
                   alt="Slide 12"
                   class="carousel-item w-full h-auto object-contain"
                 />
-                <img
+                <!-- <img
                   src="images/about/img-13.jpg"
                   alt="Slide 13"
                   class="carousel-item w-full h-auto object-contain"
-                />
+                /> -->
               </div>
               <!-- Navigation Buttons -->
               <button
@@ -652,8 +647,18 @@
           ></span>
         </a>
       </div>
-      <div class="text-white lg:text-xl">
+      <div class="hidden md:flex text-white lg:text-xl">
+        <p class="mr-16">&copy; <span id="currentYear"></span> Munaff Dental Clinic. All rights reserved.</p>
         Powered by
+        <a
+          href="https://bceesay10.github.io/personal-portfolio/index.html"
+          target="_blank"
+          class="hover:underline text-blue-500 ml-2 hover:font-bold"
+          >BC Tech</a
+        >
+      </div>
+      <div class="block md:hidden text-white lg:text-xl">
+         &copy;
         <a
           href="https://bceesay10.github.io/personal-portfolio/index.html"
           target="_blank"
@@ -662,5 +667,7 @@
         >
       </div>
     </footer>
+
+    <script> document.getElementById('currentYear').textContent = new Date().getFullYear(); </script>
   </body>
 </html>

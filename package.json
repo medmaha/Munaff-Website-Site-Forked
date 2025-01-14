@@ -1,5 +1,18 @@
 {
+  "name": "munaff-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "devDependencies": {
     "tailwindcss": "^3.4.13"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
   }
 }

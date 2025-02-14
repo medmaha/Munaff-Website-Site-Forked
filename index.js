@@ -102,3 +102,13 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (startX < endX - 50) showPrev(); 
   });
 });
+
+//Chatbot
+document.getElementById("chat-toggle").addEventListener("click", function() {
+  let chatBox = document.getElementById("chat-box");
+  if (chatBox.style.display === "none" || chatBox.style.display === "") {
+      chatBox.style.display = "block";
+  } else {
+      chatBox.style.display = "none";
+  }
+});

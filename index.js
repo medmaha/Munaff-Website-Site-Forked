@@ -104,11 +104,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //Chatbot
-document.getElementById("chat-toggle").addEventListener("click", function() {
-  let chatBox = document.getElementById("chat-box");
-  if (chatBox.style.display === "none" || chatBox.style.display === "") {
-      chatBox.style.display = "block";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const chatToggle = document.getElementById("chat-toggle");
+  if (chatToggle) {
+      chatToggle.addEventListener("click", function() {
+        let chatBox = document.getElementById("chat-box");
+        if (chatBox.style.display === "none" || chatBox.style.display === "") {
+            chatBox.style.display = "block";
+        } else {
+            chatBox.style.display = "none";
+        }
+      });
   } else {
-      chatBox.style.display = "none";
+      console.error("Element with ID 'chat-toggle' not found!");
   }
 });

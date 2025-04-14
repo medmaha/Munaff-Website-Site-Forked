@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+
+// Application Port
 const PORT = process.env.PORT || 3000;
 
 const SOURCE_DIR_NAME = "";

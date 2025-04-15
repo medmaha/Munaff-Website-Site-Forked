@@ -1,4 +1,5 @@
-window.addEventListener('scroll', function() {
+document.addEventListener("DOMContentLoaded", function(){
+    window.addEventListener('scroll', function() {
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('nav a');
 
@@ -120,3 +121,5 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Element with ID 'chat-toggle' not found!");
   }
 });
+
+})
